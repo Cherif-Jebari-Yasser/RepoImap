@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @ViewBag.count
+    </div>
+    <div> 
+        @ViewBag.exception
+    </div>
+    <ul>
+        @{
+            if (ViewBag.bounces!=null)
+            {
+                foreach (var bounce in ViewBag.bounces)
+                {
+                    <li>@bounce</li>
+                }
+            }
+
+        }
+    </ul>
+</body>
+</html>
