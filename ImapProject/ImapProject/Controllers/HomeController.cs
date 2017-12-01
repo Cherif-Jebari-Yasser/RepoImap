@@ -13,6 +13,7 @@ namespace ImapProject.Controllers
         public ActionResult Index()
         {
             try {
+
                 ImapClient imap = new ImapClient("imap.mail.yahoo.com", 993, true);
                 imap.Login("******@yahoo.com", "*******", AuthMethod.Login);
                 IEnumerable<uint> uids = imap.Search(SearchCondition.All());
